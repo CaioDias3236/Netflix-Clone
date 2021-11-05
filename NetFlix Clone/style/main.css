@@ -1,0 +1,155 @@
+
+/*
+para tag basta escrever como footer header
+para class colocamos .
+*/
+
+/* variaveis
+
+- declarar dentro da raiz :root
+- sabendo a cores ja declara em variaves
+- para nao sair mudando em vrios lugares
+- vermelho e preto
+
+*/
+
+:root{
+    --vermelho:#e50914;
+    --preta:#141414;
+}
+
+/* reset css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*limite 'e a borda da caixa*/
+}
+
+/*Elementos base*/
+
+body{
+    /*O QUE FIZER aqui influenciar no resto que esta dentro do body*/
+    background: var(--preta);
+    font-family: Arial, Helvetica, sans-serif; /* fonte principal e demais fontepar suprir*/
+    color: white;
+}
+
+
+header .container{
+    display: flex; /*chama flexbox para usar os intem flex*/
+    flex-direction: row; /*vem de padrao row podia nao colocar*/
+    align-items: center; /*alinha de forma vertical*/
+    justify-content: space-between; /*alinha de forma horizontal*/
+}
+
+header .logo{
+    margin-left: 5px;/*desgrudar netfilcx da esquerda*/
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+/* mouse estiver em cima */
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),
+    rgba(0,0,0,.50)100%), url('/img/capa-house.jpg');
+
+    height: 400px;
+    background-size: cover; /*size especificar o tamanho cover a area de cobertura da caixa*/
+
+    display: flex;/*joha para padrao linha*/
+    flex-direction: column;/*vamos modificar*/
+    justify-content: center;/*centraliza e fica no meio*/
+    align-items: flex-start;/*justufuca a esquerda*/
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;  
+
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;/*posicao fluida melhor que px*/
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*botao ja vem com uma cor predefinida*/
+/*agora vamos fazer as definicoes*/
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    
+
+    padding: 15px 30px;/*espaco interno 1 valor 4 posicoes, 2 valores sentido horario - lados - baixo*/
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+
+
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+/* wrapper 
+-envolopar
+-seria o container
+- guarda varios outros elemntos dentro
+- manipula os elemntros filhos
+
+*/
+
+.container{
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 50%;
+    width: 50%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
